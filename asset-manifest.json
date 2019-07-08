@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/faceblur/static/js/main.8df5a899.chunk.js",
+    "main.js.map": "/faceblur/static/js/main.8df5a899.chunk.js.map",
+    "runtime~main.js": "/faceblur/static/js/runtime~main.0213ce36.js",
+    "runtime~main.js.map": "/faceblur/static/js/runtime~main.0213ce36.js.map",
+    "static/js/2.65aa1cca.chunk.js": "/faceblur/static/js/2.65aa1cca.chunk.js",
+    "static/js/2.65aa1cca.chunk.js.map": "/faceblur/static/js/2.65aa1cca.chunk.js.map",
+    "index.html": "/faceblur/index.html",
+    "precache-manifest.15140a3b3f3654faa41d7b1bb69092ef.js": "/faceblur/precache-manifest.15140a3b3f3654faa41d7b1bb69092ef.js",
+    "service-worker.js": "/faceblur/service-worker.js"
+  }
+}
