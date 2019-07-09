@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.js": "/faceblur/static/js/main.8df5a899.chunk.js",
-    "main.js.map": "/faceblur/static/js/main.8df5a899.chunk.js.map",
+    "main.css": "/faceblur/static/css/main.5b6b7f85.chunk.css",
+    "main.js": "/faceblur/static/js/main.bd7cb833.chunk.js",
+    "main.js.map": "/faceblur/static/js/main.bd7cb833.chunk.js.map",
     "runtime~main.js": "/faceblur/static/js/runtime~main.0213ce36.js",
     "runtime~main.js.map": "/faceblur/static/js/runtime~main.0213ce36.js.map",
-    "static/js/2.65aa1cca.chunk.js": "/faceblur/static/js/2.65aa1cca.chunk.js",
-    "static/js/2.65aa1cca.chunk.js.map": "/faceblur/static/js/2.65aa1cca.chunk.js.map",
+    "static/js/2.d81bd2e6.chunk.js": "/faceblur/static/js/2.d81bd2e6.chunk.js",
+    "static/js/2.d81bd2e6.chunk.js.map": "/faceblur/static/js/2.d81bd2e6.chunk.js.map",
     "index.html": "/faceblur/index.html",
-    "precache-manifest.15140a3b3f3654faa41d7b1bb69092ef.js": "/faceblur/precache-manifest.15140a3b3f3654faa41d7b1bb69092ef.js",
-    "service-worker.js": "/faceblur/service-worker.js"
+    "precache-manifest.05c9c04db111aa826f71d26b234bf4ff.js": "/faceblur/precache-manifest.05c9c04db111aa826f71d26b234bf4ff.js",
+    "service-worker.js": "/faceblur/service-worker.js",
+    "static/css/main.5b6b7f85.chunk.css.map": "/faceblur/static/css/main.5b6b7f85.chunk.css.map"
   }
 }
