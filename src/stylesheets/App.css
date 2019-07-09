@@ -1,0 +1,8 @@
+.app__wrapper {
+  border: 2px solid black;
+  margin: 1rem;
+}
+
+.app__header {
+  color: var(--salmon);
+}
