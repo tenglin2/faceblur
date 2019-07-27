@@ -35,12 +35,26 @@
 // export default App;
 
 import React from 'react';
+import { HashRouter as Router, Route } from 'react-router-dom';
+import Navbar from './Navbar';
+import Home from './Home';
+import Footer from './Footer';
 
 const App = function() {
 	return (
-		<div>
-			<h1>App Component</h1>
-		</div>
+		<Router>
+			<div class="App">
+				<h1>App Component</h1>
+
+				<Navbar />
+				<Route exact={true} path="/" component={Home} />
+				<Route exact={true} path="/" component={Home} />
+				<Route exact={true} path="/" component={Home} />
+				<Route exact={true} path="/" component={Home} />
+				<Route exact={true} path="/" component={Home} />
+				<Footer />
+			</div>
+		</Router>
 	);
 };
 
