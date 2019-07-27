@@ -1,8 +1,9 @@
-.app__wrapper {
-  border: 2px solid black;
-  margin: 1rem;
+.app {
+	border: 5px solid red;
+	position: relative;
+	height: 95vh;
 }
 
 .app__header {
-  color: var(--salmon);
+	color: var(--salmon);
 }

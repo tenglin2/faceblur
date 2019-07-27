@@ -1,11 +1,19 @@
 import React from 'react';
+import '../stylesheets/Footer.css';
 
 const Footer = function() {
-  return (
-    <div>
-      <a href='https://github.com/tenglin2/faceblur' target='_blank'>Source Code Link</a>
-    </div>
-  );
-}
+	return (
+		<div class="footer">
+			<a
+				href="https://github.com/tenglin2/faceblur"
+				target="_blank"
+				rel="noopener noreferrer"
+				className="footer__link"
+			>
+				<span className="footer__link--text">Source Code Link</span>
+			</a>
+		</div>
+	);
+};
 
 export default Footer;
