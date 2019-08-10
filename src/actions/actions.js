@@ -12,3 +12,10 @@ export const addTodo = function(item) {
 		payload: item
 	};
 };
+
+export const changeName = function(name) {
+	return {
+		type: 'CHANGE_NAME',
+		payload: name
+	};
+};
