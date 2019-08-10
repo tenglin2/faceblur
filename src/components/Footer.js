@@ -3,7 +3,7 @@ import '../stylesheets/Footer.css';
 
 const Footer = function() {
 	return (
-		<div class="footer">
+		<div className="footer">
 			<a
 				href="https://github.com/tenglin2/faceblur"
 				target="_blank"
