@@ -10,6 +10,7 @@
 .footer__link:active,
 .footer__link:link {
 	text-decoration: none;
+	outline: none;
 	color: black;
 }
 

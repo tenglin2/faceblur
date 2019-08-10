@@ -1,9 +1,6 @@
-.app {
-	border: 5px solid red;
+.App {
+	/* border: 5px solid red; */
 	position: relative;
-	height: 95vh;
-}
-
-.app__header {
-	color: var(--salmon);
+	height: 100%;
+	background-color: lavenderblush;
 }
