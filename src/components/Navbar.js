@@ -4,34 +4,34 @@
 
 // // Should turn the parts with the link into specific button component. That would be nice and reuseable.
 
-// class Navbar extends React.Component {
+// classNameName Navbar extends React.Component {
 // 	render() {
 // 		return (
-// 			<nav className="navbar">
-// 				<div className="navbar__logo">
+// 			<nav classNameName="navbar">
+// 				<div classNameName="navbar__logo">
 // 					{/* Some logo should go here */}
-// 					<h1 className="navbar__logo--title">faceblur: Anonymize Photos</h1>
+// 					<h1 classNameName="navbar__logo--title">faceblur: Anonymize Photos</h1>
 // 				</div>
 
-// 				<div className="navbar__link-container">
-// 					<ul className="navbar__link-list">
-// 						<li className="navbar__link-list-item">
-// 							<Link to="/" className="navbar__link">
+// 				<div classNameName="navbar__link-container">
+// 					<ul classNameName="navbar__link-list">
+// 						<li classNameName="navbar__link-list-item">
+// 							<Link to="/" classNameName="navbar__link">
 // 								Home
 // 							</Link>
 // 						</li>
-// 						<li className="navbar__link-list-item">
-// 							<Link to="/register" className="navbar__link">
+// 						<li classNameName="navbar__link-list-item">
+// 							<Link to="/register" classNameName="navbar__link">
 // 								Register
 // 							</Link>
 // 						</li>
-// 						<li className="navbar__link-list-item">
-// 							<Link to="/signin" className="navbar__link">
+// 						<li classNameName="navbar__link-list-item">
+// 							<Link to="/signin" classNameName="navbar__link">
 // 								Signin
 // 							</Link>
 // 						</li>
-// 						<li className="navbar__link-list-item">
-// 							<Link to="/faceblur" className="navbar__link">
+// 						<li classNameName="navbar__link-list-item">
+// 							<Link to="/faceblur" classNameName="navbar__link">
 // 								Faceblur
 // 							</Link>
 // 						</li>
@@ -50,25 +50,25 @@ import Navlink from './Navlink';
 
 const Navbar = function() {
 	return (
-		<header class="Navbar">
-			<section class="logo-box">
-				<div class="logo-icon" />
-				<div class="logo-name">faceblur</div>
+		<header className="Navbar">
+			<section className="logo-box">
+				<div className="logo-icon" />
+				<div className="logo-name">faceblur</div>
 			</section>
 
-			<section class="navigation-box">
-				<div class="navigation-link">
+			<section className="navigation-box">
+				<div className="navigation-link">
 					<Navlink name="Home" />
 				</div>
-				<div class="navigation-link">
+				<div className="navigation-link">
 					<Navlink name="About" />
 				</div>
 
 				{/* We will need to conditionally render based on login state. Get this from useSelector. */}
-				<div class="navigation-link">
+				<div className="navigation-link">
 					<Navlink name="Register" />
 				</div>
-				<div class="navigation-link">
+				<div className="navigation-link">
 					<Navlink name="Login" />
 				</div>
 			</section>
