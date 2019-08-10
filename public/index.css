@@ -37,10 +37,10 @@ body {
 :root {
 	font-size: 62.5%;
 	box-sizing: border-box;
-	background-color: crimson;
-	border: .3rem solid black;
+	/* background-color: crimson;
+	border: .3rem solid black; */
 	height: 100%;
-	padding: 2rem;
+	/* padding: 2rem; */
 }
 
 body {
@@ -48,14 +48,14 @@ body {
 	box-sizing: border-box;
 	text-align: center;
 	letter-spacing: .3rem;
-	background-color: salmon;
-	border: .3rem solid black;
+	/* background-color: salmon; */
+	/* border: .3rem solid black; */
 	height: 100%;
-	padding: 1rem;
+	/* padding: 1rem; */
 }
 
 #root {
-	border: .5rem dashed green;
+	/* border: .5rem dashed green; */
 	height: 100%;
-	background-image: linear-gradient(to right bottom, peachpuff, khaki);
+	/* background-image: linear-gradient(to right bottom, peachpuff, khaki); */
 }
