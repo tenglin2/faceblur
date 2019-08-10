@@ -43,9 +43,13 @@ import Home from './Home';
 import About from './About';
 import Register from './Register';
 import Login from './Login';
+import Faceblur from './Faceblur';
 import Footer from './Footer';
 
 import '../stylesheets/App.css';
+
+import { handleInputChange } from '../actions/actions';
+import { registerNameChange, registerEmailChange, registerPasswordChange } from '../actions/actions';
 
 const App = function() {
 	// So here we get a reference to the dispatch function which accepts an action creator. THen we invoke it with the changeName action. This should return an action with a type a payload to the action reducer (and all other reducers). That should update state. And it works. Good!
@@ -56,9 +60,49 @@ const App = function() {
 	const name = useSelector((state) => state.name);
 	console.log(name);
 
+	// Extrapolated the form and input handlers to the parent top level component and passed them down as props instead.
+	const handleSubmit = function(event) {
+		event.preventDefault();
+		console.log('submission works.');
+		// Add the dispatch later....
+	};
+
+	const handleChange = function(event) {
+		console.log('updates the input value');
+		dispatch(handleInputChange(event.target.value));
+	};
+
+	// CODE FOR REGISTER PAGE
+	const handleRegisterSubmit = function(event) {
+		event.preventDefault();
+		console.log('register submission triggers');
+		clearRegisterQueries();
+	};
+
+	const handleRegisterNameChange = function(event) {
+		console.log('register name change');
+		dispatch(registerNameChange(event.target.value));
+	};
+
+	const handleRegisterEmailChange = function(event) {
+		console.log('register email change');
+		dispatch(registerEmailChange(event.target.value));
+	};
+
+	const handleRegisterPasswordChange = function(event) {
+		console.log('register password change');
+		dispatch(registerPasswordChange(event.target.value));
+	};
+
+	const clearRegisterQueries = function() {
+		dispatch(registerNameChange(''));
+		dispatch(registerEmailChange(''));
+		dispatch(registerPasswordChange(''));
+	};
+
 	return (
 		<Router>
-			<div class="App">
+			<div className="App">
 				{/* <h1>App Component</h1> */}
 
 				<Navbar />
@@ -66,8 +110,29 @@ const App = function() {
 				<Route exact={true} path="/(|Home)" component={Home} />
 				<Route exact={true} path="/About" component={About} />
 				{/* Register and SignIn need to be protected based off of logged in state. */}
-				<Route exact={true} path="/Register" component={Register} />
+				{/* <Route exact={true} path="/Register" component={Register} /> */}
+				<Route
+					exact={true}
+					path="/Register"
+					render={(props) => (
+						<Register
+							{...props}
+							handleRegisterSubmit={handleRegisterSubmit}
+							handleRegisterNameChange={handleRegisterNameChange}
+							handleRegisterEmailChange={handleRegisterEmailChange}
+							handleRegisterPasswordChange={handleRegisterPasswordChange}
+						/>
+					)}
+				/>
 				<Route exact={true} path="/Login" component={Login} />
+				{/* <Route exact={true} path="/faceblur" component={Faceblur} /> */}
+
+				{/* So this part here we wanted to pass props to our component so we had to use render instead of component and pass the props that way. Kind of weird. */}
+				<Route
+					exact={true}
+					path="/Faceblur"
+					render={(props) => <Faceblur {...props} handleSubmit={handleSubmit} handleChange={handleChange} />}
+				/>
 				<Footer />
 			</div>
 		</Router>
