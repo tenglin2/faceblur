@@ -46,12 +46,33 @@
 
 import React from 'react';
 import '../stylesheets/Navbar.css';
+import Navlink from './Navlink';
 
 const Navbar = function() {
 	return (
-		<div class="Navbar">
-			<h1>NAVDSABER</h1>
-		</div>
+		<header class="Navbar">
+			<section class="logo-box">
+				<div class="logo-icon" />
+				<div class="logo-name">faceblur</div>
+			</section>
+
+			<section class="navigation-box">
+				<div class="navigation-link">
+					<Navlink name="Home" />
+				</div>
+				<div class="navigation-link">
+					<Navlink name="About" />
+				</div>
+
+				{/* We will need to conditionally render based on login state. Get this from useSelector. */}
+				<div class="navigation-link">
+					<Navlink name="Register" />
+				</div>
+				<div class="navigation-link">
+					<Navlink name="Login" />
+				</div>
+			</section>
+		</header>
 	);
 };
 
