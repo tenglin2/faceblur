@@ -41,6 +41,7 @@ body {
 	border: .3rem solid black; */
 	height: 100%;
 	/* padding: 2rem; */
+	overflow-y: scroll;
 }
 
 body {
