@@ -1,3 +1,14 @@
-.faceblur__text {
-  color: var(--blue);
+.Faceblur {
+	display: flex;
+	height: 100%;
+}
+
+.Faceblur__options {
+	background-color: sandybrown;
+	flex: 0 0 30%;
+}
+
+.Faceblur__display {
+	background-color: salmon;
+	flex: 1;
 }
