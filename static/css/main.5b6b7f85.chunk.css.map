@@ -1,1 +1,0 @@
-{"version":3,"sources":["App.css","Faceblur.css"],"names":[],"mappings":"AAAA,cACE,qBAAuB,CACvB,WACF,CAEA,aACE,mBACF,CCPA,gBACE,iBACF","file":"main.5b6b7f85.chunk.css","sourcesContent":[".app__wrapper {\r\n  border: 2px solid black;\r\n  margin: 1rem;\r\n}\r\n\r\n.app__header {\r\n  color: var(--salmon);\r\n}",".faceblur__text {\r\n  color: var(--blue);\r\n}"]}
