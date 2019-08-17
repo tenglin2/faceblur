@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/Home.css';
+import '../stylesheets/Home.scss';
 import { Link } from 'react-router-dom';
 
 class Home extends React.Component {

@@ -45,15 +45,18 @@
 // export default Navbar;
 
 import React from 'react';
-import '../stylesheets/Navbar.css';
+import '../stylesheets/Navbar.scss';
+import { Link } from 'react-router-dom';
 import Navlink from './Navlink';
 
 const Navbar = function() {
 	return (
 		<header className="Navbar">
 			<section className="logo-box">
-				<div className="logo-icon" />
-				<div className="logo-name">faceblur</div>
+				<Link to="/Home" className="logo-link">
+					<div className="logo-icon" />
+					<div className="logo-name">faceblur</div>
+				</Link>
 			</section>
 
 			<section className="navigation-box">

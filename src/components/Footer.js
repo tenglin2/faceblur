@@ -1,16 +1,16 @@
 import React from 'react';
-import '../stylesheets/Footer.css';
+import '../stylesheets/Footer.scss';
 
 const Footer = function() {
 	return (
-		<div className="footer">
+		<div className="Footer">
 			<a
 				href="https://github.com/tenglin2/faceblur"
 				target="_blank"
 				rel="noopener noreferrer"
-				className="footer__link"
+				className="Footer__link"
 			>
-				<span className="footer__link--text">Source Code Link</span>
+				<span className="Footer__link--text">Source Code Link</span>
 			</a>
 		</div>
 	);
