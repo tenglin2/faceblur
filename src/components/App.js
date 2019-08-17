@@ -33,7 +33,6 @@
 // }
 
 // export default App;
-
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeName } from '../actions/actions';
@@ -46,10 +45,17 @@ import Login from './Login';
 import Faceblur from './Faceblur';
 import Footer from './Footer';
 
-import '../stylesheets/App.css';
+import '../stylesheets/App.scss';
+
+import Clarifai from 'clarifai';
+import API_KEY from '../credentials';
 
 import { handleInputChange } from '../actions/actions';
 import { registerNameChange, registerEmailChange, registerPasswordChange } from '../actions/actions';
+
+const app = new Clarifai.App({
+	apiKey: API_KEY
+});
 
 const App = function() {
 	// So here we get a reference to the dispatch function which accepts an action creator. THen we invoke it with the changeName action. This should return an action with a type a payload to the action reducer (and all other reducers). That should update state. And it works. Good!
@@ -60,11 +66,25 @@ const App = function() {
 	const name = useSelector((state) => state.name);
 	console.log(name);
 
+	const input = useSelector((state) => state.input);
+
 	// Extrapolated the form and input handlers to the parent top level component and passed them down as props instead.
 	const handleSubmit = function(event) {
+		// YOU NEED A SEPARATE STATE FOR IMAGE URL. TYING IT STRICTLY TO INPUT IS NO GOOD!!!
+
 		event.preventDefault();
 		console.log('submission works.');
+		console.log(`current input value is ${input}`);
 		// Add the dispatch later....
+
+		app.models.predict('a403429f2ddf4b49b307e318f00e528b', 'https://samples.clarifai.com/face-det.jpg').then(
+			function(response) {
+				console.log(response.outputs[0].data.regions);
+			},
+			function(error) {
+				console.log(error);
+			}
+		);
 	};
 
 	const handleChange = function(event) {
