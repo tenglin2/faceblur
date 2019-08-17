@@ -1,0 +1,18 @@
+.Navlink {
+	// background-color: pink;
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&:hover .Navlink__link {
+		color: black;
+	}
+}
+
+.Navlink__link {
+	color: white;
+	text-decoration: none;
+}
