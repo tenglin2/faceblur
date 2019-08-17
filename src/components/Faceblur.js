@@ -20,7 +20,7 @@
 
 import React from 'react';
 import { useSelector } from 'react-redux';
-import '../stylesheets/Faceblur.css';
+import '../stylesheets/Faceblur.scss';
 
 const Faceblur = function({ handleSubmit, handleChange }) {
 	const input = useSelector((state) => state.input);
@@ -38,10 +38,13 @@ const Faceblur = function({ handleSubmit, handleChange }) {
 			</section>
 
 			<section className="Faceblur__display">
-				<h1>
+				{/* <h1>
 					This should have the actual picture as an image. You need to get state for image url from a reducer.
 					Also flex column if sizing is off.
-				</h1>
+				</h1> */}
+				<div className="Faceblur__display--box" />
+
+				<img src={input} alt="" />
 			</section>
 		</main>
 	);
