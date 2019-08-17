@@ -1,0 +1,51 @@
+.Faceblur {
+	background-color: pink;
+	// padding: 1rem;
+	height: 88%;
+	width: 100%;
+	// min-height: 88%;
+	display: flex;
+	flex-direction: row;
+
+	@media only screen and (max-width: 900px) {
+		flex-direction: column;
+	}
+}
+
+.Faceblur__options {
+	background-color: sandybrown;
+	height: 100%;
+	width: 40%;
+
+	@media only screen and (max-width: 900px) {
+		height: 30%;
+		width: 100%;
+	}
+}
+
+.Faceblur__display {
+	height: 100%;
+	width: 60%;
+	padding: 3rem;
+	background-color: salmon;
+	// flex: 1;
+	// word-wrap: break-word;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&--box {
+		height: 20rem;
+		width: 20rem;
+		background-color: black;
+		box-shadow: 2rem 2rem 2rem white;
+	}
+
+	@media only screen and (max-width: 900px) {
+		height: 70%;
+		width: 100%;
+	}
+}
+
+/* Remember that flex-flow combines direction and wrappage. */

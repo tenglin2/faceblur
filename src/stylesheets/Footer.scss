@@ -1,0 +1,31 @@
+.Footer {
+	background-color: black;
+	color: white;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 5%; // The navbar should be 7%, and main is minimum of 88% but can increase with more content.
+
+	box-shadow: 0 -1rem 2rem rgba(0, 0, 0, .2);
+
+	// Justified it center because on hover, there's an annoying description thing that gets in the way on the bottom corners.
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Footer__link:active,
+.Footer__link:link {
+	padding: .8rem;
+	text-decoration: none;
+	outline: none;
+	color: white;
+
+	transition: all .2s;
+}
+
+.Footer__link:hover {
+	background-color: white;
+	color: black;
+}
