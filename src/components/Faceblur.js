@@ -19,11 +19,22 @@
 // export default Faceblur;
 
 import React from 'react';
+import BoundingBoxes from './BoundingBoxes';
 import { useSelector } from 'react-redux';
 import '../stylesheets/Faceblur.scss';
 
 const Faceblur = function({ handleSubmit, handleChange }) {
 	const input = useSelector((state) => state.input);
+	const imageURL = useSelector((state) => state.imageURL);
+	const faceData = useSelector((state) => state.faceData);
+	console.log(faceData);
+	const boundingBoxes = faceData.map((face) => {
+		return face.region_info.bounding_box;
+	});
+	console.log(
+		`expect bounding boxes to be an array of object containing only the boundary objects of ${boundingBoxes}`
+	);
+	console.log(boundingBoxes);
 
 	return (
 		<main className="Faceblur">
@@ -42,9 +53,10 @@ const Faceblur = function({ handleSubmit, handleChange }) {
 					This should have the actual picture as an image. You need to get state for image url from a reducer.
 					Also flex column if sizing is off.
 				</h1> */}
-				<div className="Faceblur__display--box" />
-
-				<img src={input} alt="" />
+				<div className="Faceblur__display--box">
+					<img src={imageURL} alt="" className="Faceblur__display--image" id="inputImage" />
+					<BoundingBoxes boundingBoxes={boundingBoxes} />
+				</div>
 			</section>
 		</main>
 	);

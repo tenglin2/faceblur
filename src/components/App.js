@@ -35,7 +35,6 @@
 // export default App;
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { changeName } from '../actions/actions';
 import { HashRouter as Router, Route } from 'react-router-dom';
 import Navbar from './Navbar';
 import Home from './Home';
@@ -53,6 +52,15 @@ import API_KEY from '../credentials';
 import { handleInputChange } from '../actions/actions';
 import { registerNameChange, registerEmailChange, registerPasswordChange } from '../actions/actions';
 
+// For changing the image url on submission...
+import { changeImageURL } from '../actions/actions';
+
+// For getting the data from the clarifai api on submit...
+import { changeFaceData } from '../actions/actions';
+
+// For changing the image dimensions and attach to state.
+import { changeImageDimensions } from '../actions/actions';
+
 const app = new Clarifai.App({
 	apiKey: API_KEY
 });
@@ -62,11 +70,13 @@ const App = function() {
 	// It seems that this step is necessary for some reason. Probably something to do with asynchronous actions.
 	// For now we don't need any logic. Just do the front end stuff. Reference the
 	const dispatch = useDispatch();
-	dispatch(changeName('gordon'));
+	// dispatch(changeName('gordon'));
 	const name = useSelector((state) => state.name);
 	console.log(name);
 
 	const input = useSelector((state) => state.input);
+
+	const imageURL = useSelector((state) => state.imageURL);
 
 	// Extrapolated the form and input handlers to the parent top level component and passed them down as props instead.
 	const handleSubmit = function(event) {
@@ -75,13 +85,39 @@ const App = function() {
 		event.preventDefault();
 		console.log('submission works.');
 		console.log(`current input value is ${input}`);
-		// Add the dispatch later....
+		// Add the dispatch with the input state at the current moment of submission.
+		dispatch(changeImageURL(input));
 
-		app.models.predict('a403429f2ddf4b49b307e318f00e528b', 'https://samples.clarifai.com/face-det.jpg').then(
+		// Super weird here. The imageURL is actually undefined for some reason.
+		console.log(`the actual imageURL is assigned to input of ${imageURL}`);
+		console.log(imageURL);
+
+		// Another weird part is that we needed to use input instead of the taken imageURL because it's just not defined I guess? Some error.
+		app.models.predict(Clarifai.FACE_DETECT_MODEL, input).then(
 			function(response) {
+				// Here we also need to set the response data as state to pass down to the faceblur component so that it knows the bounding boxes. Call it faceData.
 				console.log(response.outputs[0].data.regions);
+				const formattedFaceData = response.outputs[0].data.regions;
+				dispatch(changeFaceData(formattedFaceData));
+
+				// We also want to clear the input on successful submit. That being said, we don't really want to create a new value, we only want to edit one. That means we use the same reducer and action.
+
+				dispatch(handleInputChange(''));
+
+				// So I want to grab the image by id. The problem here might be that the image is currently undefined during response.
+
+				const image = document.getElementById('inputImage');
+				const imageDimensions = {
+					height: image.height,
+					width: image.width
+				};
+				console.log(image);
+				console.log(`the height is ${image.height} and width is ${image.width}`);
+
+				dispatch(changeImageDimensions(imageDimensions));
 			},
 			function(error) {
+				console.log('we have an error...');
 				console.log(error);
 			}
 		);
@@ -120,10 +156,14 @@ const App = function() {
 		dispatch(registerPasswordChange(''));
 	};
 
+	// The best thing to do here is get the image height and width and assign it to state. To do that, we would need a reducer and on successful submission on clarifai, we want to find the dimensions. The formal way is probably with react refs but dom manipulation is probably easier.
+
 	return (
 		<Router>
 			<div className="App">
-				{/* <h1>App Component</h1> */}
+				{/* <h1>Some value of {faceData.length}</h1> */}
+
+				{/* <h1>The current input value is {input}</h1> */}
 
 				<Navbar />
 				{/* Or operator here to make no change and Home have the same component render. */}
