@@ -1,28 +1,27 @@
-export const changeSearchInput = function(input) {
-	console.log('input given', input);
-	return {
-		type: 'CHANGE_INPUT',
-		payload: input
-	};
-};
+// export const changeSearchInput = function(input) {
+// 	console.log('input given', input);
+// 	return {
+// 		type: 'CHANGE_INPUT',
+// 		payload: input
+// 	};
+// };
 
-export const addTodo = function(item) {
-	return {
-		type: 'ADD_TODO',
-		payload: item
-	};
-};
+// export const addTodo = function(item) {
+// 	return {
+// 		type: 'ADD_TODO',
+// 		payload: item
+// 	};
+// };
 
-export const changeName = function(name) {
-	return {
-		type: 'CHANGE_NAME',
-		payload: name
-	};
-};
+// export const changeName = function(name) {
+// 	return {
+// 		type: 'CHANGE_NAME',
+// 		payload: name
+// 	};
+// };
 
 export const handleInputChange = function(input) {
-	console.log(input);
-
+	console.log('on submit this should trigger');
 	return {
 		type: 'INPUT_CHANGE',
 		payload: input
@@ -59,3 +58,30 @@ export const registerPasswordChange = function(password) {
 // 	registerEmailChange('');
 // 	registerPasswordChange('');
 // };
+
+// We need to update image url
+export const changeImageURL = function(imageURL) {
+	console.log(`the image url that the action takes is ${imageURL}`);
+	// Return an action that is dispatch to the reducer.
+
+	return {
+		type: 'CHANGE_IMAGE_URL',
+		payload: imageURL
+	};
+};
+
+export const changeFaceData = function(faceData) {
+	// Remember that we expect the face data to be an array of objects where each object defines a different face detected. There is also a length property we can use to iterate through each face.
+
+	return {
+		type: 'CHANGE_FACE_DATA',
+		payload: faceData
+	};
+};
+
+export const changeImageDimensions = function(imageDimensions) {
+	return {
+		type: 'CHANGE_IMAGE_DIMENSIONS',
+		payload: imageDimensions
+	};
+};
