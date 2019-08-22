@@ -7,6 +7,10 @@ import registerNameReducer from './registerNameReducer';
 import registerEmailReducer from './registerEmailReducer';
 import registerPasswordReducer from './registerPasswordReducer';
 
+import imageURLReducer from './imageURLReducer';
+import faceDataReducer from './faceDataReducer';
+import imageDimensionsReducer from './imageDimensionsReducer';
+
 // So these are our state values and we name it right here.
 const rootReducer = combineReducers({
 	count: countReducer,
@@ -14,7 +18,10 @@ const rootReducer = combineReducers({
 	input: inputReducer,
 	registerName: registerNameReducer,
 	registerEmail: registerEmailReducer,
-	registerPassword: registerPasswordReducer
+	registerPassword: registerPasswordReducer,
+	imageURL: imageURLReducer,
+	faceData: faceDataReducer,
+	imageDimensions: imageDimensionsReducer
 });
 
 export default rootReducer;
