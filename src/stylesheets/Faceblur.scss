@@ -32,14 +32,41 @@
 	// word-wrap: break-word;
 
 	display: flex;
-	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 
 	&--box {
-		height: 20rem;
-		width: 20rem;
+		// These dimensions don't actually matter, the image properties are the only things that are actually affected.
+		width: 45rem;
+		height: 55rem;
+		// max-width: 80rem;
+		// max-height: 50rem;
 		background-color: black;
-		box-shadow: 2rem 2rem 2rem white;
+		// box-shadow: 2rem 2rem 2rem white;
+		padding: 1rem;
+
+		position: relative;
+
+		@media only screen and (max-width: 900px) {
+			width: 70rem;
+			height: 42rem;
+		}
+	}
+
+	&--image {
+		height: auto;
+		width: auto;
+		max-height: 50rem;
+		max-width: 45rem;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+		@media only screen and (max-width: 900px) {
+			max-height: 40rem;
+			max-width: 70rem;
+		}
 	}
 
 	@media only screen and (max-width: 900px) {
