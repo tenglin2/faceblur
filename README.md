@@ -15,7 +15,7 @@ The purpose of this application is to have a service that anonymizes inserted pi
 - PostgreSQL
 
 ### Features
-- Aesthic Design Using Advanced CSS Techniques and Procedures
+- Aesthetic Design Using Advanced CSS Techniques and Procedures
 - Fully Functional User Authentication Service using Cloud Based Services
 - Backend RESTful API to Handle Server Requests from Front End
 - Fluid Sign Up and Register Mechanic with Proper Error Handling
