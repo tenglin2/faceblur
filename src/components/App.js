@@ -74,12 +74,12 @@ const App = function() {
 	// For now we don't need any logic. Just do the front end stuff. Reference the
 	const dispatch = useDispatch();
 	// dispatch(changeName('gordon'));
-	const name = useSelector((state) => state.name);
+	// const name = useSelector((state) => state.name);
 	// console.log(name);
 
 	const input = useSelector((state) => state.input);
 
-	const imageURL = useSelector((state) => state.imageURL);
+	// const imageURL = useSelector((state) => state.imageURL);
 
 	// Extrapolated the form and input handlers to the parent top level component and passed them down as props instead.
 	const handleSubmit = function(event) {
