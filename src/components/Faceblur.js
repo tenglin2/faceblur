@@ -71,11 +71,23 @@ const Faceblur = function({ handleSubmit, handleChange }) {
 	return (
 		<main className="Faceblur">
 			<section className="Faceblur__options">
-				<h1>https://i.ytimg.com/vi/L4Z-pXRHQVA/maxresdefault.jpg</h1>
+				{/* <h1>https://i.ytimg.com/vi/L4Z-pXRHQVA/maxresdefault.jpg</h1> */}
+
+				<h3 className="Faceblur__instruction--header">
+					Enter A Valid IMG URL{' '}
+					<span role="img" aria-label="emoji">
+						&#128513;
+					</span>
+				</h3>
 
 				<form className="Faceblur__form" onSubmit={handleSubmit}>
 					<div className="Faceblur__form__input-query">
-						<input value={input} onChange={handleChange} className="input-field" />
+						<input
+							value={input}
+							onChange={handleChange}
+							className="input-field"
+							placeholder="Enter An Image URL :3"
+						/>
 						<button type="submit" className="input-button">
 							Submit &rarr;
 						</button>
@@ -91,14 +103,11 @@ const Faceblur = function({ handleSubmit, handleChange }) {
 						<label className="radio-label__pitch">PITCH</label>
 					</div>
 				</form>
-				<h1>Hover Over And Click On Faces To Toggle</h1>
+
+				<h5 className="Faceblur__instruction--footer">Hover + Click To Toggle | Export w/ Snipping Tool</h5>
 			</section>
 
 			<section className="Faceblur__display">
-				{/* <h1>
-					This should have the actual picture as an image. You need to get state for image url from a reducer.
-					Also flex column if sizing is off.
-				</h1> */}
 				<div className="Faceblur__display--box">
 					<img
 						src={imageURL}
