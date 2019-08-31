@@ -11,6 +11,8 @@ import imageURLReducer from './imageURLReducer';
 import faceDataReducer from './faceDataReducer';
 import imageDimensionsReducer from './imageDimensionsReducer';
 
+import radioOptionReducer from './radioOptionReducer';
+
 // So these are our state values and we name it right here.
 const rootReducer = combineReducers({
 	count: countReducer,
@@ -21,7 +23,8 @@ const rootReducer = combineReducers({
 	registerPassword: registerPasswordReducer,
 	imageURL: imageURLReducer,
 	faceData: faceDataReducer,
-	imageDimensions: imageDimensionsReducer
+	imageDimensions: imageDimensionsReducer,
+	radioOption: radioOptionReducer
 });
 
 export default rootReducer;
