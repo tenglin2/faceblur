@@ -85,3 +85,10 @@ export const changeImageDimensions = function(imageDimensions) {
 		payload: imageDimensions
 	};
 };
+
+export const changeRadioOption = function(radioOption) {
+	return {
+		type: 'CHANGE_RADIO_OPTION',
+		payload: radioOption
+	};
+};
