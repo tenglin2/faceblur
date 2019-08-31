@@ -5,7 +5,7 @@ import '../stylesheets/BoundingBoxes.scss';
 
 // boundingBoxes is the array of objects that define the
 const BoundingBoxes = function({ boundingBoxes }) {
-	console.log(`the bounding boxes are currently ${boundingBoxes}`);
+	// console.log(`the bounding boxes are currently ${boundingBoxes}`);
 
 	const renderBoxes = function(boundingBoxes) {
 		return boundingBoxes.map((boundingBox, id) => {
