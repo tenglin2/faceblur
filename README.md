@@ -29,4 +29,4 @@ The purpose of this application is to have a service that anonymizes inserted pi
 To Be Filled in Soon...
 
 ### Final Notes
-This respository will not include the back end code for the API. Instead the back end portion of the project will be in a separate repository to clearly show the difference in roles and because it is a better practice. 
+This repository will not include the back end code for the API. Instead the back end portion of the project will be in a separate repository to clearly show the difference in roles and because it is a better practice. 
