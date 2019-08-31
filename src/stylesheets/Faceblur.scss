@@ -1,9 +1,7 @@
 .Faceblur {
 	background-color: pink;
-	// padding: 1rem;
 	height: 88%;
 	width: 100%;
-	// min-height: 88%;
 	display: flex;
 	flex-direction: row;
 
@@ -69,73 +67,56 @@
 			align-items: center;
 		}
 	}
-}
 
-.Faceblur__options {
-	background-color: sandybrown;
-	height: 100%;
-	width: 40%;
+	// The left section of the faceblur page where you specify all the user input and instructions.
+	&__options {
+		background-color: sandybrown;
+		height: 100%;
+		width: 40%;
 
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	@media only screen and (max-width: 900px) {
-		height: 30%;
-		width: 100%;
-	}
-}
-
-.Faceblur__display {
-	height: 100%;
-	width: 60%;
-	padding: 3rem;
-	background-color: salmon;
-	// flex: 1;
-	// word-wrap: break-word;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	&--box {
-		// These dimensions don't actually matter, the image properties are the only things that are actually affected.
-		width: 45rem;
-		height: 55rem;
-		// max-width: 80rem;
-		// max-height: 50rem;
-		background-color: black;
-		// box-shadow: 2rem 2rem 2rem white;
-		padding: 1rem;
-
-		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
 		@media only screen and (max-width: 900px) {
-			width: 70rem;
-			height: 42rem;
+			height: 30%;
+			width: 100%;
 		}
 	}
 
-	&--image {
-		height: auto;
-		width: auto;
-		max-height: 50rem;
-		max-width: 45rem;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+	&__display {
+		height: 100%;
+		width: 60%;
+		padding: 2rem;
+		background-color: salmon;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		// This determines the max width and height of the inputted image.
+		&--box {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		// Specifiying the dimensions of the image, centering, box-shadow.
+		&--image {
+			height: auto;
+			width: auto;
+			max-height: 100%;
+			max-width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			box-shadow: 0 0 2rem rgba(0, 0, 0, .6);
+		}
 
 		@media only screen and (max-width: 900px) {
-			max-height: 40rem;
-			max-width: 70rem;
+			height: 70%;
+			width: 100%;
 		}
 	}
-
-	@media only screen and (max-width: 900px) {
-		height: 70%;
-		width: 100%;
-	}
 }
-
-/* Remember that flex-flow combines direction and wrappage. */
