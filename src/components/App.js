@@ -61,6 +61,9 @@ import { changeFaceData } from '../actions/actions';
 // For changing the image dimensions and attach to state.
 import { changeImageDimensions } from '../actions/actions';
 
+// Action used for changing the radio button selection state to detect, blur, or pitch.
+import { changeRadioOption } from '../actions/actions';
+
 const app = new Clarifai.App({
 	apiKey: API_KEY
 });
@@ -72,7 +75,7 @@ const App = function() {
 	const dispatch = useDispatch();
 	// dispatch(changeName('gordon'));
 	const name = useSelector((state) => state.name);
-	console.log(name);
+	// console.log(name);
 
 	const input = useSelector((state) => state.input);
 
@@ -89,8 +92,8 @@ const App = function() {
 		dispatch(changeImageURL(input));
 
 		// Super weird here. The imageURL is actually undefined for some reason.
-		console.log(`the actual imageURL is assigned to input of ${imageURL}`);
-		console.log(imageURL);
+		// console.log(`the actual imageURL is assigned to input of ${imageURL}`);
+		// console.log(imageURL);
 
 		// Another weird part is that we needed to use input instead of the taken imageURL because it's just not defined I guess? Some error.
 		app.models.predict(Clarifai.FACE_DETECT_MODEL, input).then(
@@ -102,7 +105,8 @@ const App = function() {
 
 				// We also want to clear the input on successful submit. That being said, we don't really want to create a new value, we only want to edit one. That means we use the same reducer and action.
 
-				dispatch(handleInputChange(''));
+				// For now instead of removing it after submission, let's just leave it.
+				// dispatch(handleInputChange(''));
 
 				// So I want to grab the image by id. The problem here might be that the image is currently undefined during response.
 
@@ -111,8 +115,8 @@ const App = function() {
 					height: image.height,
 					width: image.width
 				};
-				console.log(image);
-				console.log(`the height is ${image.height} and width is ${image.width}`);
+				// console.log(image);
+				// console.log(`the height is ${image.height} and width is ${image.width}`);
 
 				dispatch(changeImageDimensions(imageDimensions));
 			},
@@ -121,6 +125,12 @@ const App = function() {
 				console.log(error);
 			}
 		);
+
+		console.log('FLAAAGGGGGAGGAGAG: we need to find the radio button value, I believe is named choice');
+		// So instead of going throught he event target, we just use dom manipulation, but we have to attach an id to the wrapper div.
+		const radios = document.querySelector('input[name="choice"]:checked').value;
+		console.log(radios);
+		dispatch(changeRadioOption(radios));
 	};
 
 	const handleChange = function(event) {
