@@ -1,11 +1,47 @@
 .BoundingBox {
 	position: absolute;
-	box-shadow: 0 0 0 .3rem #149df2 inset;
+
 	// border: 2px solid black;
 	// background-color: crimson;
 	cursor: pointer;
 
+	// I think the problem is that I'm blurring the div covering the face and not the actual face. I can't really blur just the face without affecting the whole image.
+	// Fuck. So I can't truly blur the face because that's part of the background image. The only thing I can do is black out
+
+	// This blur is more effective than pure black.
+	// background-image: url(https://i.ytimg.com/vi/L4Z-pXRHQVA/maxresdefault.jpg);
+	// background-repeat: no-repeat;
+	// background-attachment: fixed;
+	// background-size: cover;
+
+	// HERE IS THE ACTUAL BLURRING CODE. HAD TO USE EXTERNAL IMAGE BECAUSE OF OVERLAY DIV.
+	// background-image: url(/img/blur.jpg);
+	// background-repeat: no-repeat;
+	// background-attachment: fixed;
+	// background-size: cover;
+	// border-radius: 50%;
+	// filter: blur(.3rem);
+	// background-color: rgba(0, 0, 0, 0.9);
+
 	&:hover {
-		background-color: red;
+		box-shadow: 0 0 0 .3rem #149df2 inset;
 	}
+
+	// &::before {
+	// 	content: "";
+	// 	background-image: url(/img/blur.jpg);
+	// 	background-repeat: no-repeat;
+	// 	background-attachment: fixed;
+	// 	background-size: cover;
+	// 	border-radius: 50%;
+
+	// 	filter: blur(.2rem);
+	// 	position: absolute;
+	// 	left: 0;
+	// 	right: 0;
+	// 	top: 0;
+	// 	bottom: 0;
+	// }
+
+	// background: red;
 }
