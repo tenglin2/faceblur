@@ -11,7 +11,8 @@ class Home extends React.Component {
 						<h1 className="display__box--description">
 							Come and Anonymize Your Photos with Machine Learning and AI
 						</h1>
-						<img src="img/blur.jpg" />
+						{/* Seems like the pathing doesn't like absolute root start. */}
+						{/* <img src="img/blur.jpg" /> */}
 						{/* <Button destination="register" text="Sign Up Today!" /> */}
 						{/* Remember a link tag is basically the same thing as a anchor tag. */}
 						<Link to="/Faceblur" className="display__box--button">
