@@ -14,7 +14,7 @@ const BoundingBox = function({ bound }) {
 	});
 
 	const [ blurStyle, setBlurStyle ] = React.useState({
-		backgroundImage: 'url(img/blur.jpg)',
+		backgroundImage: 'url("https://tenglin2.github.io/faceblur/img/blur.jpg")',
 		backgroundRepeat: 'no-repeat',
 		backgroundAttachment: 'fixed',
 		backgroundSize: 'cover',
