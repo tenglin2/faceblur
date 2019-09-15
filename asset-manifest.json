@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/faceblur/static/css/main.3f9f322a.chunk.css",
-    "main.js": "/faceblur/static/js/main.0643ef09.chunk.js",
-    "main.js.map": "/faceblur/static/js/main.0643ef09.chunk.js.map",
+    "main.css": "/faceblur/static/css/main.0cccb7bd.chunk.css",
+    "main.js": "/faceblur/static/js/main.f1c7aa04.chunk.js",
+    "main.js.map": "/faceblur/static/js/main.f1c7aa04.chunk.js.map",
     "runtime~main.js": "/faceblur/static/js/runtime~main.0213ce36.js",
     "runtime~main.js.map": "/faceblur/static/js/runtime~main.0213ce36.js.map",
     "static/js/2.0a57d7ac.chunk.js": "/faceblur/static/js/2.0a57d7ac.chunk.js",
     "static/js/2.0a57d7ac.chunk.js.map": "/faceblur/static/js/2.0a57d7ac.chunk.js.map",
     "index.html": "/faceblur/index.html",
-    "precache-manifest.3c271aa1dd1a4a1f6a2adefb0b510018.js": "/faceblur/precache-manifest.3c271aa1dd1a4a1f6a2adefb0b510018.js",
+    "precache-manifest.39941c34897d1a4ba5b831922959068c.js": "/faceblur/precache-manifest.39941c34897d1a4ba5b831922959068c.js",
     "service-worker.js": "/faceblur/service-worker.js",
-    "static/css/main.3f9f322a.chunk.css.map": "/faceblur/static/css/main.3f9f322a.chunk.css.map"
+    "static/css/main.0cccb7bd.chunk.css.map": "/faceblur/static/css/main.0cccb7bd.chunk.css.map",
+    "static/media/Home.scss": "/faceblur/static/media/tech_background.d412470e.jpg"
   }
 }
