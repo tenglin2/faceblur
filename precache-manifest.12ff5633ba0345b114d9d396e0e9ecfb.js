@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "073d67dfe1e8308368d98965a98e9b43",
+    "revision": "fbbdfa55c35de42d457e2a7fe7c90b29",
     "url": "/faceblur/index.html"
   },
   {
-    "revision": "475e59aefbe0e9441d80",
+    "revision": "cbd7676b814e43878f26",
     "url": "/faceblur/static/css/main.586e48d8.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/faceblur/static/js/2.0a57d7ac.chunk.js"
   },
   {
-    "revision": "475e59aefbe0e9441d80",
-    "url": "/faceblur/static/js/main.ab0fd0bd.chunk.js"
+    "revision": "cbd7676b814e43878f26",
+    "url": "/faceblur/static/js/main.70c8f54c.chunk.js"
   },
   {
     "revision": "888e2ea7c3a2983e8d41",
